@@ -1,7 +1,7 @@
 name: multiTV
 markdown: kramdown
 pygments: true
-baseurl: /multitv
+baseurl: /multiTV
 encoding: utf-8
 
 kramdown:
