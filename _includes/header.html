@@ -14,11 +14,11 @@
             <div class="navbar-collapse collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav">
                     <li {% if "/installation.html" == page.url %}class="active"{% endif %}>
-                    <a href="installation.html">
+                    <a href="{{ site.baseurl }}/installation.html">
                         Installation
                     </a>
                     </li>
-                    <li class="dropdown{% if "index.html" == page.url %} active{% endif %}">
+                    <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         {% for weight in (1..10) %}
@@ -26,7 +26,7 @@
                         {% if p.weight == weight %}
                         {% if p.category == "Documentation" %}
                             <li {% if p.url == page.url %}class="active"{% endif %}>
-                            <a href="{{ p.url }}">
+                            <a href="{{ site.baseurl }}{{ p.url }}">
                                 {{ p.title }}
                             </a>
                             </li>
@@ -37,12 +37,12 @@
                     </ul>
                     </li>
                     <li {% if "/examples.html" == page.url %}class="active"{% endif %}>
-                    <a href="examples.html">
+                    <a href="{{ site.baseurl }}/examples.html">
                         Examples
                     </a>
                     </li>
                     <li {% if "/donate.html" == page.url %}class="active"{% endif %}>
-                    <a href="donate.html">
+                    <a href="{{ site.baseurl }}/donate.html">
                         Donate
                     </a>
                     </li>
