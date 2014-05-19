@@ -51,7 +51,7 @@ rows | Comma separated list of row numbers (or all rows) that should be displaye
 randomize | Random order of displayed rows (disables `reverse` and `orderBy` parameter) | 0
 reverse | Reverse order of displayed rows (disables `orderBy` parameter) | 0
 orderBy | Column name, column order type and order direction to sort the output (format: `name:type direction` – type could be `text` or `date`, defaults to `text` – direction defaults to `asc`) | -
-toPlaceholder | The snippet output is assigned to a placeholder named as the parameter value (i.e. [+myPlaceholder+]), single items are assigned to placeholders named as the parameter value followed by the row number (i.e. [+myPlaceholder.1+]). Normal snippet output is suppressed. (Note 2) | -
+toPlaceholder | The snippet output is assigned to a placeholder named as the parameter value (i.e. [+myPlaceholder+]), single items are assigned to placeholders named as the parameter value followed by the row number (i.e. [+myPlaceholder.1+]). Normal snippet output is suppressed.[^2] | -
 toJson | The snippet output contains the json encoded result of the multitv snippet call. Useful to retreive the multiTV results other snippets by runSnippet | 0
 published | Display only multiTVs of published (1), unpublished (0) or both (2) kind of documents | 1
 emptyOutput | Return empty string if the multiTV is empty, otherwise return outer template | 1
@@ -91,3 +91,4 @@ pagination | Contains the pagination (if parameter pagination is enabled)
 {:.table .table-striped .table-hover}
 
 [^1]: MODX does not like =, ? and & in snippet parameters. If the template code has to use those signs, put the template code in a chunk or change the default templates in the config file.
+[^2]: If the snippet output is assigned to placeholder and PHx is installed, the page should be set to uncached and the Snippet should be called cached. Otherwise PHx will 'steal' the placeholders before the Snippet could fill them.
