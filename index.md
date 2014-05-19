@@ -17,6 +17,9 @@ images:
   - name: links_edit
     image: https://raw.github.com/Jako/multiTV/master/multitv.links_edit.png
     caption: Links example (datatable mode)
+  - name: module
+    image: https://raw.github.com/Jako/multiTV/master/multitv.module.png
+    caption: Database Manager (CRUD module)
 ---
 
 [multiTV](https://github.com/Jako/multiTV) is a package for MODX Evolution content management framework.
