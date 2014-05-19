@@ -145,5 +145,3 @@ Property | Description | Default
 radioTabs | Tabs in the datatable editing layer are displayed as radio buttons. The button state is saved in *fieldTab* column of each table row (this column has to exist). | false
 sorting | Enable sorting by column header. | false
 {:.table .table-striped .table-hover}
-
-See the [multidemo config](https://github.com/Jako/multiTV/blob/master/assets/tvs/multitv/configs/multidemo.config.inc.php) for all usable vertical settings and the [multicontent config](https://github.com/Jako/multiTV/blob/master/assets/tvs/multitv/configs/multicontent.config.inc.php) for all usable datatable settings.
