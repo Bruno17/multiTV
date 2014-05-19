@@ -3,6 +3,20 @@ layout: default
 title: multiTV
 category: Home
 weight: 0
+
+images:
+  - name: events
+    image: https://raw.github.com/Jako/multiTV/master/multitv.events.png
+    caption: Events example (events mode)
+  - name: images
+    image: https://raw.github.com/Jako/multiTV/master/multitv.images.png
+    caption: Images example (vertical mode)
+  - name: links
+    image: https://raw.github.com/Jako/multiTV/master/multitv.links.png
+    caption: Links example (datatable mode)
+  - name: links_edit
+    image: https://raw.github.com/Jako/multiTV/master/multitv.links_edit.png
+    caption: Links example (datatable mode)
 ---
 
 [multiTV](https://github.com/Jako/multiTV) is a package for MODX Evolution content management framework.
@@ -25,15 +39,4 @@ and some extras
 
 ## Screenshots
 
-Events example:
-
-![Eventlist example](https://raw.github.com/Jako/multiTV/master/multitv.events.png)
-
-Images example:
-
-![Images example](https://raw.github.com/Jako/multiTV/master/multitv.images.png)
-
-Links example (with editing layer):
-
-![Images example](https://raw.github.com/Jako/multiTV/master/multitv.links.png)
-![Images example](https://raw.github.com/Jako/multiTV/master/multitv.links_edit.png)
+{% include screenshots.html %}
