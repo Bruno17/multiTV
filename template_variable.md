@@ -18,7 +18,7 @@ The fields of the multitv could be defined in the key `fields`. This key contain
 Property | Description | Default
 -------- | ----------- | -------
 caption | Caption (horizontal) or label (vertical) for the input | -
-type | Type of the input (could be set to almost all MODX input types[^1] and thumb for thumbnail display of image tvs[^2]) | text
+type | Type of the input (could be set to almost all MODX input types[^1] and `thumb` for thumbnail display of image tvs[^2]) | text
 elements | [Same options](http://rtfm.modx.com/evolution/1.0/developers-guide/template-variables/creating-a-template-variable) as in the *input option values* of a MODX template variable are possible i.e. for a dropdown with all documents in the MODX root: ``@SELECT `pagetitle`, `id` FROM `modx_site_content` WHERE parent = 0 ORDER BY `menuindex` ASC`` | -
 default | Default value for the input. This value could contain calculated parts. There are two placeholders available: `{i}` contains an autoincremented index `{alias}` contains the alias of the edited document. | -
 thumbof | Name of an image input. A thumbnail of the selected image will be rendered into this area | -
@@ -44,7 +44,15 @@ render | Enable rengering of the column content with this PHx capable string | -
 
 ### Editing Layer
 
-In *datatable* and *dbtable* mode the content of the editing layer could be defined in the key `form`. This key contains an array of form tab settings. Each form tab setting contains an array of field properties in the value of the content key. If a field property is not set, the field property in `fields` is used.
+In *datatable* and *dbtable* mode the content of the editing layer could be defined in the key `form`. This key contains an array of form tab settings.
+
+Property | Description | Default
+-------- | ----------- | -------
+caption | **(required)** Caption for the form tab | -
+content | **(required)** Associative array of field settings | -
+{:.table .table-striped .table-hover}
+
+Each form tab setting contains an associative array of field properties (the key contains the fieldname in `fields`). If a field property is not set, the field property in `fields` is used.
 
 Property | Description | Default
 -------- | ----------- | -------
