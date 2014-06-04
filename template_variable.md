@@ -19,7 +19,7 @@ Property | Description | Default
 -------- | ----------- | -------
 caption | Caption (horizontal) or label (vertical) for the input | -
 type | Type of the input (could be set to almost all MODX input types[^1] and `thumb` for thumbnail display of image tvs[^2]) | text
-elements | [Same options](http://rtfm.modx.com/evolution/1.0/developers-guide/template-variables/creating-a-template-variable) as in the *input option values* of a MODX template variable are possible i.e. for a dropdown with all documents in the MODX root: ``@SELECT `pagetitle`, `id` FROM `modx_site_content` WHERE parent = 0 ORDER BY `menuindex` ASC`` | -
+elements | Same options as in the *input option values* of a [MODX template variable](http://rtfm.modx.com/evolution/1.0/developers-guide/template-variables/creating-a-template-variable) are possible i.e. for a dropdown with all documents in the MODX root: ``@SELECT `pagetitle`, `id` FROM `modx_site_content` WHERE parent = 0 ORDER BY `menuindex` ASC`` | -
 default | Default value for the input. This value could contain calculated parts. There are two placeholders available: `{i}` contains an autoincremented index `{alias}` contains the alias of the edited document. | -
 thumbof | Name of an image input. A thumbnail of the selected image will be rendered into this area | -
 width | Width of the input | 100
@@ -65,8 +65,8 @@ The default output templates for the multiTV snippet could be defined in the key
 
 Property | Description | Default
 ---- | ----------- | -------
-rowTpl | Default row template chunk for the snippet output. Could be changed in snippet call. See [snippet documentation](/snippets.html) for possible placeholders | -
-outerTpl | Default outer template chunk for the snippet output. Could be changed in snippet call. See [snippet documentation](/snippets.html) for possible placeholders | -
+rowTpl | Default row template chunk for the snippet output. Could be changed in snippet call. See [snippet documentation](/multiTV/snippets.html) for possible placeholders | -
+outerTpl | Default outer template chunk for the snippet output. Could be changed in snippet call. See [snippet documentation](/multiTV/snippets.html) for possible placeholders | -
 {:.table .table-striped .table-hover}
 
 ### Other options
