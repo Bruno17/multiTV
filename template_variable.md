@@ -65,8 +65,8 @@ The default output templates for the multiTV snippet could be defined in the key
 
 Property | Description | Default
 ---- | ----------- | -------
-rowTpl | Default row template chunk for the snippet output. Could be changed in snippet call. See [snippet documentation](/multiTV/snippets.html) for possible placeholders | -
-outerTpl | Default outer template chunk for the snippet output. Could be changed in snippet call. See [snippet documentation](/multiTV/snippets.html) for possible placeholders | -
+rowTpl | Default row template chunk for the snippet output. Could be changed in snippet call. See [snippet documentation](/multiTV/snippet.html) for possible placeholders | -
+outerTpl | Default outer template chunk for the snippet output. Could be changed in snippet call. See [snippet documentation](/multiTV/snippet.html) for possible placeholders | -
 {:.table .table-striped .table-hover}
 
 ### Other options
