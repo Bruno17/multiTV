@@ -9,7 +9,7 @@ All options for a custom template variable are set in a PHP Array or JSON config
 
 ### Display mode
 
-The display mode of the input fields in the multi field list could be set in the key `display` to *horizontal* (events example), *vertical* (images example), *single*, *datatable* (links or multicontent example) or *dbtable* (dbtabledemo example). A multiTV with single display configuration contains only one list element.
+The display mode of the input fields in the multi field list could be set in the key `display` to *horizontal* (events example), *vertical* (images example), *single*, *datatable* (links or multicontent example) or *dbtable* (dbtabledemo example). A multiTV with single display configuration contains only one list element. With a multiTV in *dbtable* mode a (custom) table in the MODX database could be displayed and edited.
 
 ### Fields
 
