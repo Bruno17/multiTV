@@ -144,4 +144,5 @@ Property | Description | Default
 ---- | ----------- | -------
 radioTabs | Tabs in the datatable editing layer are displayed as radio buttons. The button state is saved in *fieldTab* column of each table row (this column has to exist). | false
 sorting | Enable sorting by column header. | false
+sortindex | Column name that ist used as sorting index. The column type has to be integer and it should contain an autoincremented index (see in [Fields](#fields)) as default value. | false
 {:.table .table-striped .table-hover}
