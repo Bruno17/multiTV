@@ -40,6 +40,7 @@ fieldname | **(required)** Fieldname that is displayed in this column | -
 caption | Caption of the column | Caption for fieldname in `fields`
 width | Width of the column | Width for fieldname in `fields`
 render | Enable rengering of the column content with this PHx capable string | -
+sortable | Enable sorting for this column by clicking on the column header in *datatable* or *dbtable* mode. Only active if sorting is disabled in [other options](#other-options) | true
 {:.table .table-striped .table-hover}
 
 ### Editing Layer
@@ -79,7 +80,8 @@ enablePaste | multiTV could contain *paste table data* link that displays a past
 enableClear | multiTV could contain *clear all* link that clears the content of the multiTV | true
 csvseparator | Column separator for csv clipboard table data. The csv clipboard table data should contain a new line for each row. | ,
 radioTabs | Tabs in the datatable editing layer are displayed as radio buttons. The button state is saved in *fieldTab* key of each multiTV row. | false
-sorting | Enable sorting by column header in datatable mode. Row reordering by drag & drop will be disabled. | false
+sorting | Enable sorting by clicking on the column header in *datatable* or *dbtable* mode. Row reordering by drag & drop will be disabled. | false
+hideHeader | Hide the table header in *datatable* and *dbtable* mode. | false
 {:.table .table-striped .table-hover}
 
 See the [multidemo config](https://github.com/Jako/multiTV/blob/master/assets/tvs/multitv/configs/multidemo.config.inc.php) for all usable vertical settings and the [multicontent config](https://github.com/Jako/multiTV/blob/master/assets/tvs/multitv/configs/multicontent.config.inc.php) for all usable datatable settings.
