@@ -108,7 +108,7 @@ form | Array of form tab settings (see [Editing layer](#editing-layer)) | -
 
 For every button a javascript file will be included with the following path *assets/tvs/multitv/buttons/[groupkey]/[buttonkey].button.js* (groupkey contains the button group config key, buttonkey contains the button config key)
 
-Example for a generate coupons button with the group config key *coupons* and one button config key *generate*.
+Example for a generate coupons button with one group config key *coupons* and one button config key *generate*. The button section could contain several group configs and each one several button configs.
 
     "buttons": {
         "coupons": {
@@ -135,8 +135,8 @@ Example for a generate coupons button with the group config key *coupons* and on
             }
         }
     },
-
-
+    
+The [event_log module config](https://github.com/Jako/multiTV/blob/master/assets/tvs/multitv/moduleconfigs/event_log.moduleconfig.json)) contains a simpler example for a csvexport button.
 
 ### Other options
 
