@@ -102,9 +102,11 @@ Property | Description | Default
 -------- | ----------- | -------
 caption | Caption for the button | -
 icon | Icon for the button located in *assets/tvs/multitv/css/images* | -
-processor | name of the processor file located in *assets/tvs/multitv/processors/[key]* (key contains the group config key)| -
+processor | name of the processor file located in *assets/tvs/multitv/processors/[groupkey]* (groupkey contains the group config key)| -
 form | Array of form tab settings (see [Editing layer](#editing-layer)) | -
 {:.table .table-striped .table-hover}
+
+For every button a javascript file will be included with the following path *assets/tvs/multitv/buttons/[groupkey]/[buttonkey].button.js* (groupkey contains the button group config key, buttonkey contains the button config key)
 
 Example for a generate coupons button.
 
