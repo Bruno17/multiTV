@@ -76,12 +76,16 @@ The other options for one multiTV could be defined in the key `configuration`.
 
 Property | Description | Default
 ---- | ----------- | -------
+csvseparator | Column separator for csv clipboard table data. The csv clipboard table data should contain a new line for each row. | ,
+displayLength | Number of entries displayed by default in *datatable* and *dbtable* mode. | 10
+displayLengthMenu | Entries in the 'number of entries' selector in *datatable* and *dbtable* mode. | 10,25,50,100
 enablePaste | multiTV could contain *paste table data* link that displays a paste box. In this box you could paste Word/HTML table clipboard data, Google Docs table clipboard data and csv data. | true
 enableClear | multiTV could contain *clear all* link that clears the content of the multiTV | true
-csvseparator | Column separator for csv clipboard table data. The csv clipboard table data should contain a new line for each row. | ,
-radioTabs | Tabs in the datatable editing layer are displayed as radio buttons. The button state is saved in *fieldTab* key of each multiTV row. | false
-sorting | Enable sorting by clicking on the column header in *datatable* or *dbtable* mode. Row reordering by drag & drop will be disabled. | false
 hideHeader | Hide the table header in *datatable* and *dbtable* mode. | false
+radioTabs | Tabs in the datatable editing layer are displayed as radio buttons. The button state is saved in *fieldTab* key of each multiTV row. | false
+sortindex | Field that contains the sort index (to enable draggable sorting in the module or *dbtable* mode) | -
+sorting | Enable sorting by clicking on the column header in *datatable* or *dbtable* mode. Row reordering by drag & drop will be disabled. | false
+
 {:.table .table-striped .table-hover}
 
 See the [multidemo config](https://github.com/Jako/multiTV/blob/master/assets/tvs/multitv/configs/multidemo.config.inc.php) for all usable vertical settings and the [multicontent config](https://github.com/Jako/multiTV/blob/master/assets/tvs/multitv/configs/multicontent.config.inc.php) for all usable datatable settings.
