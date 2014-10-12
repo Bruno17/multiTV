@@ -85,7 +85,6 @@ hideHeader | Hide the table header in *datatable* and *dbtable* mode. | false
 radioTabs | Tabs in the datatable editing layer are displayed as radio buttons. The button state is saved in *fieldTab* key of each multiTV row. | false
 sortindex | Field that contains the sort index (to enable draggable sorting in the module or *dbtable* mode) | -
 sorting | Enable sorting by clicking on the column header in *datatable* or *dbtable* mode. Row reordering by drag & drop will be disabled. | false
-
 {:.table .table-striped .table-hover}
 
 See the [multidemo config](https://github.com/Jako/multiTV/blob/master/assets/tvs/multitv/configs/multidemo.config.inc.php) for all usable vertical settings and the [multicontent config](https://github.com/Jako/multiTV/blob/master/assets/tvs/multitv/configs/multicontent.config.inc.php) for all usable datatable settings.
