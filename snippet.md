@@ -43,11 +43,12 @@ Name | Description | Default value
 tvName | **(required)** Name of the template variable that contains the multiTV (the column names of the mulitTV are received from the config file) | -
 docid | Document id where the custom tv is retreived from (i.e. if the multiTV Snippet is called in a Ditto template) | Current document id
 tplConfig | Array key in the config file that contains the output templates configuration (will be prefixed with `templates`) | ''
-outerTpl | Outer template: chunkname, filename (value starts with `@FILE`) or code (value starts with `@CODE` – placeholders have to be masked by `((` and `))`. [^1] | `@CODE:<select name="$tvName">[+wrapper+]</select>` or custom template in template variable config file
-rowTpl | Row template: chunkname, filename (value starts with `@FILE`) or code (value starts with `@CODE` – placeholders have to be masked by `((` and `))`. [^1] | `@CODE:<option value="[+value+]">[+key+]</option>` or custom template in template variable config file
+outerTpl | Outer template: chunkname, filename (value starts with `@FILE`) or code (value starts with `@CODE` – placeholders have to be masked by `((` and `))`. Usable [placeholders](#placeholder-in-outertpl). [^1] | `@CODE:<select name="$tvName">[+wrapper+]</select>` or custom template in template variable config file
+rowTpl | Row template: chunkname, filename (value starts with `@FILE`) or code (value starts with `@CODE` – placeholders have to be masked by `((` and `))`. Usable [placeholders](#placeholder-in-rowtpl). [^1] | `@CODE:<option value="[+value+]">[+key+]</option>` or custom template in template variable config file
 display | Count of rows that are displayed, `all` for all rows | 5
 offset | Count of rows from start that are not displayed | 0
 rows | Comma separated list of row numbers (or all rows) that should be displayed | all
+where | JSON encoded array of where clauses to filter the results. Example [clauses](#placeholder-in-rowtpl). | -
 randomize | Random order of displayed rows (disables `reverse` and `orderBy` parameter) | 0
 reverse | Reverse order of displayed rows (disables `orderBy` parameter) | 0
 orderBy | Column name, column order type and order direction to sort the output (format: `name:type direction` – type could be `text` or `date`, defaults to `text` – direction defaults to `asc`) | -
@@ -66,6 +67,16 @@ offsetKey | Pagination offset parameter key | page
 {:.table .table-striped .table-hover}
 
 The default templates for outer template and row template could be defined in the config file for the custom template variable. These custom definitions could be overwritten by `rowTpl` and `outerTpl` in snippet call. Both template chunks are parsed by PHx (chunkie class).
+
+###Where clause examples
+
+The where parameter could be set with an JSON encoded array of where clauses. Each where clause has to use the following format: `{"fieldname:operator":"value"}` *fieldname* is the name of a multiTV field, *operator* is the comparing operator, *value* is the value the fieldname is compared with. Possible operators are `=`, `!=`, `>`, `<`, `>=`, `<=`, `LIKE NOT`, `LIKE`. The default operator is `=`.  
+
+``&where=`{"price":"2000"}` `` will filter all rows where the mulitTV field price is not 2000.
+
+``&where=`{"city:LIKE":"London"}` `` will filter all rows where the mulitTV field city does not contain London.
+
+Multiple where clauses are combined with `AND` i.e. ``&where=`{"city:LIKE":"London","price":"2000"}` `` will filter all rows where the mulitTV field city does not contain London and where the mulitTV field price is not 2000.
 
 ###Placeholder in rowTpl
 
@@ -90,5 +101,5 @@ docid | Value of docid parameter or current document id
 pagination | Contains the pagination (if parameter pagination is enabled)
 {:.table .table-striped .table-hover}
 
-[^1]: MODX does not like =, ? and & in snippet parameters. If the template code has to use those signs, put the template code in a chunk or change the default templates in the config file.
+[^1]: Older MODX versions don’t like =, ? and & in snippet parameters. If the template code has to use those signs, put the template code in a chunk or change the default templates in the config file.
 [^2]: If the snippet output is assigned to placeholder and PHx is installed, the page should be set to uncached and the Snippet should be called cached. Otherwise PHx will 'steal' the placeholders before the Snippet could fill them.
