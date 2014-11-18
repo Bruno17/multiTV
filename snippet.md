@@ -17,6 +17,7 @@ The multiTV snippet has to be called to display the content of a multiTV templat
 &display=`5`
 &offset=`0`
 &rows=`all`
+&where=``
 &randomize=`0`
 &reverse=`0`
 &orderBy=``
@@ -70,7 +71,7 @@ The default templates for outer template and row template could be defined in th
 
 ###Where clause examples
 
-The where parameter could be set with an JSON encoded array of where clauses. Each where clause has to use the following format: `{"fieldname:operator":"value"}` *fieldname* is the name of a multiTV field, *operator* is the comparing operator, *value* is the value the fieldname is compared with. Possible operators are `=`, `!=`, `>`, `<`, `>=`, `<=`, `LIKE NOT`, `LIKE`. The default operator is `=`.  
+The *where* parameter could be set with an JSON encoded array of where clauses. Each where clause has to use the following format: `{"fieldname:operator":"value"}` *fieldname* is the name of a multiTV field, *operator* is the comparing operator, *value* is the value the fieldname is compared with. Possible operators are `=`, `!=`, `>`, `<`, `>=`, `<=`, `LIKE NOT`, `LIKE`. The default operator is `=`.  
 
 ``&where=`{"price":"2000"}` `` will filter all rows where the mulitTV field price is not 2000.
 
